@@ -1,10 +1,4 @@
-class TradingsView {
-    constructor(selector) {
-        this._element = document.querySelector(selector);
-    }
-    update(model) {
-        this._element.innerHTML = this.template(model);
-    }
+class TradingsView extends View {
     template(model) {
         return `
         <table class="table table-hover table-bordered">

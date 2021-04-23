@@ -1,10 +1,4 @@
-class MsgView {
-    constructor(selector) {
-        this._element = document.querySelector(selector);
-    }
-    update(model) {
-        this._element.innerHTML = this.template(model);
-    }
+class MsgView extends View {
     template(model) {
         return `<p class="alert alert-info">${model}</p>`;
     }
