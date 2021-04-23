@@ -1,4 +1,4 @@
-class View<T> {
+abstract class View<T> {
    
     protected _element: Element
 
@@ -10,8 +10,6 @@ class View<T> {
         this._element.innerHTML = this.template(model)
     }
 
-    template(model: T): string {
-        throw new Error("Need to implement template method");
-    }
+    abstract template(model: T): string
 
 }
