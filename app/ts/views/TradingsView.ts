@@ -1,14 +1,4 @@
-class TradingsView {
-
-    private _element: Element
-
-    constructor(selector: string) {
-        this._element = document.querySelector(selector)
-    }
-
-    update(model: Tradings): void {
-        this._element.innerHTML = this.template(model)
-    }
+class TradingsView extends View<Tradings> {
 
     template(model: Tradings): string {
         return `
